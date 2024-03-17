@@ -17,7 +17,7 @@ public class Aula02A {
             System.out.println("A lista tem " + vetor.tamanho() + " posições.");
             System.out.println(vetor.toString());
             System.out.println(vetor.busca(3));
-            System.out.println(vetor.busca2("Posição 2"));
+            System.out.println(vetor.findIndex("Posição 2"));
             
         } catch (Exception e) {
             e.printStackTrace();

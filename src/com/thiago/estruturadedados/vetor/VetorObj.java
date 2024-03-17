@@ -1,18 +1,16 @@
 package com.thiago.estruturadedados.vetor;
 
-// import java.util.Arrays;
-// import java.util.Iterator;
-
-public class Vetor {
-    private String[] elementos;
+public class VetorObj {
+    
+    private Object [] elementos;
     private int tamanho;
 
-    public Vetor(int capacidade) {
+    public VetorObj(int capacidade) {
         this.elementos = new String[capacidade];
         this.tamanho = 0;
     }
 
-    public void adicionaV1(String elemento) {
+    public void adicionaV1(Object elemento) {
         this.aumentaCapacidade();
         ;
         for (int i = 0; i < this.elementos.length; i++) {
@@ -23,7 +21,7 @@ public class Vetor {
         }
     }
 
-    public void adicionaV2(String elemento) throws Exception {
+    public void adicionaV2(Object elemento) throws Exception {
         this.aumentaCapacidade();
         if (this.tamanho < this.elementos.length) {
             this.elementos[this.tamanho] = elemento;
@@ -33,7 +31,7 @@ public class Vetor {
         }
     }
 
-    public boolean adicionar(String elemento) {
+    public boolean adicionar(Object elemento) {
         this.aumentaCapacidade();
 
         if (this.tamanho < this.elementos.length) {
@@ -45,7 +43,7 @@ public class Vetor {
         }
     }
 
-    public void adicionarPorPosicao(int posicao, String elemento) {
+    public void adicionarPoPosicao(int posicao, Object elemento) {
         this.aumentaCapacidade();
         if (!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição inválida");
@@ -81,14 +79,14 @@ public class Vetor {
         return s.toString();
     }
 
-    public String busca(int posicao) {
+    public Object busca(int posicao) {
         if (!(posicao >= 0 && posicao < tamanho)) {
             throw new IllegalArgumentException("Posição inválida");
         }
         return this.elementos[posicao];
     }
 
-    public int findIndex(String elemento) {
+    public int findIndex(Object elemento) {
         for (int i = 0; i < this.tamanho; i++) {
             if (this.elementos[i].equals(elemento)) {
                 return i;
@@ -100,7 +98,7 @@ public class Vetor {
 
     public void aumentaCapacidade() {
         if (this.tamanho == this.elementos.length) {
-            String[] elementosNovos = new String[this.elementos.length * 2];
+            Object[] elementosNovos = new Object[this.elementos.length * 2];
 
             for (int i = 0; i < this.elementos.length; i++) {
                 elementosNovos[i] = this.elementos[i];
@@ -123,3 +121,4 @@ public class Vetor {
     }
 
 }
+
