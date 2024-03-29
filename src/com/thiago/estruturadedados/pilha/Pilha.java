@@ -4,20 +4,35 @@ import com.thiago.estruturadedados.base.EstruturaEstatica;
 
 public class Pilha<T> extends EstruturaEstatica<T> {
 
-    public Pilha(){
+    public Pilha() {
         super();
     }
 
-    public Pilha(int capcidade){
+    public Pilha(int capcidade) {
         super();
     }
 
-    public boolean adiciona(T elemento){
+    public boolean empilha(T elemento) {
         return super.adiciona(elemento);
+
     }
 
-    public void adiciona(int posicao, T elemento){
-        super.adiciona(posicao,elemento);
+    public T topo() {
+        if (this.estaVazia()) {
+            return null;
+        }
+        return this.elementos[tamanho - 1];
+    }
+
+    public T desempilha() {
+        if (this.estaVazia()) {
+            return null;
+        }
+
+        T elemento = this.elementos[tamanho - 1];
+
+        tamanho--;
+        return elemento;
     }
 
 }
