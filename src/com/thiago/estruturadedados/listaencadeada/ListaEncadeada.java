@@ -32,6 +32,8 @@ public class ListaEncadeada<T> {
         this.tamanho = 0;
     }
 
+
+
     public int getTamanho() {
         return this.tamanho;
     }
