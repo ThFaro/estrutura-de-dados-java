@@ -1,5 +1,7 @@
 package com.thiago.estruturadedados.listaencadeada.teste;
 
+import java.util.LinkedList;
+
 import com.thiago.estruturadedados.listaencadeada.ListaEncadeada;
 
 public class Listateste {
@@ -33,6 +35,30 @@ public class Listateste {
         System.out.println(lista);
 
         System.out.println(lista.buscaPosicao(1));
+
+    }
+
+
+    public static void testeLinkedList(){
+        LinkedList<Integer> lista =  new LinkedList<>();
+
+        lista.add(1);
+        lista.addFirst(0);
+        lista.addLast(3);
+
+        System.out.println(lista.contains(1));
+
+        lista.add(2,2);
+        System.out.println(lista);
+
+        lista.remove(0);
+        System.out.println(lista);
+
+        lista.remove(0);
+        lista.removeFirst();
+        lista.removeLast();
+        System.out.println(lista);
+
     }
 
 }
