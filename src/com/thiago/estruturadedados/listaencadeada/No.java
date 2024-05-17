@@ -31,5 +31,4 @@ public class No<T> {
         this.elemento = elemento;
         this.proximo = null;
     }
-
 }
